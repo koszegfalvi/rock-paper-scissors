@@ -13,27 +13,17 @@ public class GameController {
     public GameController(GameService gameService) {
         this.gameService = gameService;
     }
-   @GetMapping({"/home"})
-    public String getHome(Model model){
-       model.addAttribute("game",gameService.getGame);
-       return "home";
-   }
 
-@PostMapping("/gameResult")
-    public String getChoice(String choice){
-       gameService.
-}
+    @GetMapping({"/home"})
+    public String getHome(Model model) {
+        model.addAttribute("game", gameService.getGame());
+        return "home";
+    }
 
-
-
-
-
-
-
-
-
-
-
+    @PostMapping("/gameResult")
+    public String getChoice(String choice) {
+        return "redirect:/home";
+    }
 
 
 }

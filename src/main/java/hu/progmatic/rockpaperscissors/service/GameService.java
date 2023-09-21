@@ -8,6 +8,7 @@ import java.util.Random;
 
 @Service
 public class GameService {
+
     private Game game;
   public String choiceList[] = {"Rock", "Paper", "Scissor"};
     Random random = new Random();
@@ -20,23 +21,23 @@ public class GameService {
     }
 
     public String whoWin(String choice) {
-        if (choice.equals("Rock") && randomChoice.equals("Scissor")) {
+        if (choice.equals("Rock") && randomChoice.equals("Scissors")) {
             return "You win!";
         }
         if (choice.equals("Rock") && randomChoice.equals("Paper")) {
             return "The computer wins!";
         }
-        if (choice.equals("Paper") && randomChoice.equals("Scissor")) {
+        if (choice.equals("Paper") && randomChoice.equals("Scissors")) {
             return "The computer wins!";
         }
         if (choice.equals("Paper") && randomChoice.equals("Rock")) {
             return "You win!";
         }
-        if (choice.equals("Scissor") && randomChoice.equals("Rock")) {
+        if (choice.equals("Scissors") && randomChoice.equals("Rock")) {
             return "The computer wins!";
 
         }
-        if (choice.equals("Scissor") && randomChoice.equals("Paper")) {
+        if (choice.equals("Scissors") && randomChoice.equals("Paper")) {
             return "You win!";
         }
         return "equals!";
